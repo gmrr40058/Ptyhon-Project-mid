@@ -35,6 +35,9 @@ while function != 'quit':
                         if function.title() == 'Add':
                             main_while_cnt = 1
                             break
+                        elif function.title() == 'List':
+                            main_while_cnt = 1
+                            break
                         elif function.title() == 'Home':
                             break
                         else:
@@ -57,13 +60,16 @@ while function != 'quit':
             if function.title() == 'Add':
                 continue
             elif function.title() == 'Home' or new_title.title() == 'Home':
-                break
+                pass
             elif function == '1':
                 Fc.update(Course_Code, choice, new_title, new_credit, new_prq)
                 print('Undated Successfully.')
                 while True:
                     function = input('Enter update to update more or list to see updated list home or go home: ')
                     if function.title() == 'Update' or function.title() == 'List':
+                        main_while_cnt = 1
+                        break
+                    elif function.title() == 'List':
                         main_while_cnt = 1
                         break
                     elif function.title() == 'Home':
@@ -80,16 +86,26 @@ while function != 'quit':
 
     elif function.title() == 'Delete' or function == '4':
         Fc.display()
+        main_while_cnt = 0
         with open('List_of_course.txt', 'r') as file:
             data = file.read()
             while True:
                 course = input("Enter the course code you want to delete: ")
                 if course in data:
-                    Fc.delete(course)
-                    print("deleted successfully")
-                    break
+                    function = Fc.delete_prq_update(course)
+                    if function.title() == 'Home':
+                        break
+                    elif function.title() == 'Update':
+                        main_while_cnt = 1
+                        break
+                    else:
+                        Fc.delete(course)
+                        print("deleted successfully")
+                        break
                 else:
                     print('The course is not exist.')
+            if main_while_cnt == 1:
+                continue
 
     elif function.title() == 'Details' or function == '5':
         with open('List_of_course.txt', 'r') as file:

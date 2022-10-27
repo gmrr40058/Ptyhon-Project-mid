@@ -109,7 +109,7 @@ def prq_validate(course_prq):
     if course_prq in codes or course_prq == '-':
         function_prq = '1'
     else:
-        print('Prerequisites course s not added in the list. Please add the prerequisites course first.')
+        print('Prerequisites course is not added in the list. Please add the prerequisites course first.')
         while True:
             function_prq = input('Enter add to add course or home to go home: ')
             if function_prq.title() == 'Add':
@@ -143,9 +143,9 @@ def choice_validate():
                        "Course title = ct\n"
                        "Course Credit = cc\n"
                        "Prerequisites = cp : ")
-        new_title = 0
-        new_credit = 0
-        new_prq = 0
+        new_title = '0'
+        new_credit = '0'
+        new_prq = '0'
         function = '1'
         if choice == 'ct':
             new_title = input("Enter your new course title: ")
@@ -171,6 +171,47 @@ def choice_validate():
     return function, choice, new_title, new_credit, new_prq
 
 
+def delete_prq_update(course):
+    with open('List_of_course.txt', 'r+') as file:
+        lines = file.readlines()
+        checked = 0
+        function = '1'
+        for line in lines:
+            for_cnt = 0
+            line = line.split()
+            if course == line[3]:
+                print(f'Change the prerequisites for {line[1]} if you want '
+                      f'to delete the course which code is {course}.')
+                while True:
+                    x = input(f'Enter check to check if another '
+                              f'course have also prerequisites {course} or not: ')
+                    if x.title() == 'Check':
+                        for_cnt = 1
+                        checked = 1
+                        break
+                    else:
+                        pass
+                if for_cnt == 1:
+                    continue
+            elif for_cnt == 0:
+                pass
+            else:
+                pass
+        if checked == 1:
+            print(f'No other course have prerequisites {course}')
+            while True:
+                function = input("Enter update for update prerequisites or home "
+                                 "if you dont want to delete course: ")
+                if function.title() == 'Home':
+                    break
+                elif function.title() == 'Update':
+
+                    break
+                else:
+                    print('Enter invalid function.')
+    return function
+
+
 def delete(course):
     with open('List_of_course.txt', 'r+') as file:
         lines = file.readlines()
@@ -180,10 +221,6 @@ def delete(course):
             line = line.split()
             if course == line[0]:
                 del line
-            elif course == line[3]:
-                print(f'{line[1]} has prerequisites {course}.\n'
-                      f'Change the prerequisites for {line[1]} if you want to delete the course which code is {course}')
-
             else:
                 file.write(f'{line[0]}     {line[1]}')
                 file.write(' ' * (77 - len(line[1])))
