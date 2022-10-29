@@ -3,3 +3,4 @@ Code     TITLE_OF_COURSE                                                        
 1000     INTRODUCTION_TO_PROGRAMMING                                                  3          -
 1003     INTRODUCTION_TO_DATABASE                                                     3          1000
 1004     GEOGRAPHY                                                                    3          -
+1234     ENGLISH                                                                      3          1000
