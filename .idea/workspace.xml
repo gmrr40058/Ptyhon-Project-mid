@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c7bb5a9-e73c-46cd-bdb7-3c562111f9ef" name="Changes" comment="delete function updated.">
-      <change afterPath="$PROJECT_DIR$/Practice_ref.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Function2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Function2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/List_of_course.txt" beforeDir="false" afterPath="$PROJECT_DIR$/List_of_course.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/Practice.py" afterDir="false" />
-    </list>
+    <list default="true" id="7c7bb5a9-e73c-46cd-bdb7-3c562111f9ef" name="Changes" comment="code_validate added in functions." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666896575429</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="code_validate added in functions.">
+      <created>1667025566673</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667025566673</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,6 +147,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="delete function updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="delete function updated." />
+    <MESSAGE value="code_validate added in functions." />
+    <option name="LAST_COMMIT_MESSAGE" value="code_validate added in functions." />
   </component>
 </project>
