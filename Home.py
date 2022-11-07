@@ -15,10 +15,10 @@ while function != 'quit':
     elif function.title() == 'Add' or function == '2':
         main_while_cnt = 0
         Course_Code = Fc.add_code_validate()
-        if Course_Code != 'Home':
+        if Course_Code.title() != 'Home':
             Course_Title = input('Enter course title(*Unique): ')
             Course_Title = Fc.title_validate(Course_Title)
-            if Course_Title != 'Home':
+            if Course_Title.title() != 'Home':
                 Course_Credit = input('Enter course credit 1 to 3: ')
                 Course_Credit = Fc.credit_validate(Course_Credit)
                 Course_Prq = input('Enter course prerequisites(course code or -): ')
@@ -31,7 +31,7 @@ while function != 'quit':
                     Fc.add(Course_Code, Course_Title, Course_Credit, Course_Prq)
                     print('Course added successfully.')
                     while True:
-                        function = input('Enter add to add more or list to see the list home or go home: ')
+                        function = input('Enter add to add more or list to see the list or home to go home: ')
                         if function.title() == 'Add':
                             main_while_cnt = 1
                             break
@@ -169,4 +169,4 @@ while function != 'quit':
 5. Details
 6. Search'''
     print(functions)
-    function = input("Enter quit to finish the program or continue entering function number: ")
+    function = input("Enter quit to finish the program or continue entering function name or number: ")

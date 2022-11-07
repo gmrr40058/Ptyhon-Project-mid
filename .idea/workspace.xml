@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c7bb5a9-e73c-46cd-bdb7-3c562111f9ef" name="Changes" comment="code_validate added in functions." />
+    <list default="true" id="7c7bb5a9-e73c-46cd-bdb7-3c562111f9ef" name="Changes" comment="code_validate added in functions.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Function2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Function2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/Home.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/List_of_course.txt" beforeDir="false" afterPath="$PROJECT_DIR$/List_of_course.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

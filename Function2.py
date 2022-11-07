@@ -52,7 +52,7 @@ def lst():
 def code_validate():
     while True:
         try:
-            course_code = int(input("Enter course code(*It is unchangeable and unique must be 1234 digit integer): "))
+            course_code = int(input("Enter course code(*It is unchangeable and unique must be 4 digit integer: "))
             course_code = str(course_code)
             if len(course_code) == 4:
                 break
@@ -72,12 +72,13 @@ def add_code_validate():
                 line = line.split()
                 if course_code == line[0]:
                     print(f'Course code match with code of {line[1]}')
-                    course_code = input('Try another code or enter home go home: ')
+                    course_code = input('Try another code or enter home to go home: ')
                     if course_code.title() == 'Home':
                         break
                     else:
+                        course_code = code_validate()
                         break
-        elif course_code == 'Home':
+        elif course_code.title() == 'Home':
             break
         else:
             break
@@ -93,7 +94,7 @@ def title_validate(course_title):
             for line in lines:
                 line = line.split()
                 if course_title == line[1]:
-                    print(f'The title of course code {line[0]} is same: ')
+                    print(f'The title of course code {line[0]} is same. ')
                     course_title = input('Try another title or enter home to  go home: ')
                     course_title = course_title.upper()
                     course_title = course_title.replace(' ', '_')
@@ -101,7 +102,7 @@ def title_validate(course_title):
                         break
                     else:
                         break
-        elif course_title == 'Home':
+        elif course_title.title() == 'Home':
             break
         else:
             break
@@ -171,6 +172,7 @@ def choice_validate():
         elif choice == 'cc':
             new_credit = input("Enter your new course credit: ")
             new_credit = credit_validate(new_credit)
+            break
         elif choice == 'cp':
             new_prq = input("Enter your new course prerequisites: ")
             new_prq, function = prq_validate(new_prq)
